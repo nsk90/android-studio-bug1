@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import ru.nsk.myapplication.databinding.FragmentSecondBinding
+import ru.nsk.myapplication.SecondFragmentDirections.Companion.actionSecondFragmentToFirstFragment
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -33,7 +34,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToFirstFragment())
+            findNavController().navigate(actionSecondFragmentToFirstFragment())
         }
     }
 
